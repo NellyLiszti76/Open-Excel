@@ -1,0 +1,2 @@
+# Open-Excel
+ Open Excel application (force new instance) Local $oExcel2 = _Excel_Open(Default, Default, Default, Default, True) If @error Then     Exit MsgBox($MB_SYSTEMMODAL, "Excel UDF: _Excel_Close Example", "Error creating the second Excel application object." &amp; @CRLF &amp; "@error = " &amp; @error &amp; ", @extended = " &amp; @extended) Else     Local $aProcesses = ProcessList("Excel.exe")     $PID2 = $aProcesses[2][1]     ToolTip("Second Open Excel, PID's are: " &amp; $PID1 &amp; ", " &amp; $PID2)     _ArrayDisplay($aProcesses)     ToolTip("") EndIf
